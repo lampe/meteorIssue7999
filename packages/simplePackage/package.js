@@ -12,16 +12,10 @@ Package.onUse(function (api) {
         'underscore'
     ], [ 'client', 'server' ]);
 
-    api.addFiles('simplePackage.js');
-
     api.use([
         'jquery'
     ], 'client');
 });
-
-Npm.depends({
-  'cheerio': '0.22.0'
-})
 
 Package.onTest(function (api) {
     api.versionsFrom('1.4.2');
@@ -40,4 +34,8 @@ Package.onTest(function (api) {
         'random',
         'underscore'
     ]);
+
+    Npm.depends({
+      'cheerio': '0.22.0'
+    })
 });
